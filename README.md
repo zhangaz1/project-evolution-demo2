@@ -19,6 +19,7 @@ node client by angular+
 
 ```
 cd src/server
+npm install
 npm run start
 ```
 
@@ -26,5 +27,6 @@ npm run start
 
 ```
 cd src/client
-ng serve
+npm install
+npm run start
 ```
