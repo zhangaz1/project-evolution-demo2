@@ -21,7 +21,4 @@ export class GamesComponent implements OnInit {
     this.games = this.gamesService.getGames();
   }
 
-  public runGame(gameId: string) {
-    console.log('run game:', gameId);
-  }
 }
