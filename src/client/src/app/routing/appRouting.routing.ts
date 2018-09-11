@@ -1,17 +1,24 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { SimpleSnakeComponent } from '../modules/snakes/simpleSnake/simpleSnake.component';
-import { AdvancedSnakeComponent } from '../modules/snakes/advancedSnake/advancedSnake.component';
-import { RxSnakeComponent } from '../modules/snakes/rxSnake/rxSnake.component';
-import { OnlineSnakeComponent } from '../modules/snakes/onlineSnake/onlineSnake.component';
+import { PageNotFoundComponent } from '../core/core.module';
+
+import {
+  SimpleSnakeComponent,
+  AdvancedSnakeComponent,
+  RxSnakeComponent,
+  OnlineSnakeComponent,
+} from '../modules/snakes/snakes.module';
+
 
 const routes: Routes = [
-  { path: '', redirectTo: 'simpleSnake', pathMatch: 'full' },
   { path: 'simpleSnake', component: SimpleSnakeComponent },
   { path: 'advancedSnake', component: AdvancedSnakeComponent },
   { path: 'rxSnake', component: RxSnakeComponent },
-  { path: 'onlineSnake', component: OnlineSnakeComponent }
+  { path: 'onlineSnake', component: OnlineSnakeComponent },
+
+  { path: '', redirectTo: 'simpleSnake', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

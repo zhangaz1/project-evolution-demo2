@@ -1,10 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SimpleSnakeModule } from './simpleSnake/simpleSnake.module';
-import { AdvancedSnakeModule } from './advancedSnake/advancedSnake.module';
-import { RxSnakeModule } from './rxSnake/rxSnake.module';
-import { OnlineSnakeModule } from './onlineSnake/onlineSnake.module';
+import {
+  SimpleSnakeModule,
+  SimpleSnakeComponent,
+} from './simpleSnake/simpleSnake.module';
+
+import {
+  AdvancedSnakeModule,
+  AdvancedSnakeComponent,
+} from './advancedSnake/advancedSnake.module';
+
+import {
+  RxSnakeModule,
+  RxSnakeComponent,
+} from './rxSnake/rxSnake.module';
+
+import {
+  OnlineSnakeModule,
+  OnlineSnakeComponent,
+} from './onlineSnake/onlineSnake.module';
+
+export {
+  SimpleSnakeComponent,
+  AdvancedSnakeComponent,
+  RxSnakeComponent,
+  OnlineSnakeComponent,
+};
 
 @NgModule({
   imports: [
@@ -16,6 +38,6 @@ import { OnlineSnakeModule } from './onlineSnake/onlineSnake.module';
     RxSnakeModule,
     OnlineSnakeModule,
   ],
-  declarations: []
+  declarations: [],
 })
 export class SnakesModule { }

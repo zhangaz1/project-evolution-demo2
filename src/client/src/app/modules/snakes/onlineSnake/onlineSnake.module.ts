@@ -2,10 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OnlineSnakeComponent } from './onlineSnake.component';
 
+export {
+  OnlineSnakeComponent,
+};
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
-  declarations: [OnlineSnakeComponent]
+  declarations: [
+    OnlineSnakeComponent,
+  ],
 })
 export class OnlineSnakeModule { }

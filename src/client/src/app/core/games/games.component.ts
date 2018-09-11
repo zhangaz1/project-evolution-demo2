@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { GamesService } from '../../shared/games/games.service';
+import { Router } from '@angular/router';
+
 import { Observable } from 'rxjs';
 
 import { IGame } from '@interfaces/index';
+
+import { GamesService } from '../../shared/games/games.service';
 
 @Component({
   selector: 'app-games',
@@ -14,11 +17,16 @@ export class GamesComponent implements OnInit {
   public games: Observable<IGame[]>;
 
   constructor(
+    private router: Router,
     private gamesService: GamesService,
   ) { }
 
   public ngOnInit() {
     this.games = this.gamesService.getGames();
+  }
+
+  public showGame(gameId: string) {
+    this.router.navigate([gameId]);
   }
 
 }

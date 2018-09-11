@@ -2,10 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdvancedSnakeComponent } from './advancedSnake.component';
 
+export {
+  AdvancedSnakeComponent,
+};
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
-  declarations: [AdvancedSnakeComponent]
+  declarations: [
+    AdvancedSnakeComponent,
+  ],
 })
 export class AdvancedSnakeModule { }
