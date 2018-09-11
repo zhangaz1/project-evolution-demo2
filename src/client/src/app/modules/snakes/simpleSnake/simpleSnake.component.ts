@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-simpleSnake',
+  selector: 'app-simple-snake',
   templateUrl: './simpleSnake.component.html',
   styleUrls: ['./simpleSnake.component.css']
 })
