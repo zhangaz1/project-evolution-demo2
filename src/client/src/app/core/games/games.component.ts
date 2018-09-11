@@ -17,8 +17,11 @@ export class GamesComponent implements OnInit {
     private gamesService: GamesService,
   ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.games = this.gamesService.getGames();
   }
 
+  public runGame(gameId: string) {
+    console.log('run game:', gameId);
+  }
 }

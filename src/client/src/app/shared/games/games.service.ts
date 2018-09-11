@@ -13,7 +13,8 @@ export class GamesService {
 
   public getGames(): Observable<IGame[]> {
     return of([
-      new Game('snake'),
+      new Game('snake', 'snake'),
+      new Game('snake2', 'snake2'),
     ]);
   }
 

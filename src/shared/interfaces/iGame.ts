@@ -1,5 +1,5 @@
 export { IGame };
 export default interface IGame {
-	// id: string,
+	id: string,
 	name: string,
 }

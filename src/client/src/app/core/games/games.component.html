@@ -1,6 +1,6 @@
 <div>
     <p>games:</p>
     <ul>
-        <li *ngFor="let game of games|async">{{game.name}}</li>
+        <li *ngFor="let game of games|async"><button (click)="runGame(game.id)">{{game.name}}</button></li>
     </ul>
 </div>
