@@ -6,6 +6,7 @@ export default class Game implements IGame {
 	constructor(
 		public id: string,
 		public name: string,
+		public description: string = '',
 	) { }
 
 }
