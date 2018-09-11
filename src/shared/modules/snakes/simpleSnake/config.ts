@@ -1,7 +1,7 @@
 import DefaultConfig from './defaultConfig.js';
 
 export default class Config extends DefaultConfig {
-	constructor(settings: undefined | null | object) {
+	constructor(settings?: undefined | null | object) {
 		super();
 
 		if (settings) {

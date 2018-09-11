@@ -1,6 +1,4 @@
-import Game from './../../core/models/game.js';
-
-import consts from './../../configs/consts.js';
+import { IGame } from './../../../core/index';
 
 import Config from './config.js';
 
@@ -8,8 +6,8 @@ import Snake from './snake.js';
 
 export default function (
     env: Object = {},
-    container: HTMLDivElement = <HTMLDivElement>consts.gameGround.get(0)
-): Promise<Game> {
+    container: HTMLDivElement
+): Promise<IGame> {
     const envSettings = {
         cellWidth: 10,
         groundRows: 30,

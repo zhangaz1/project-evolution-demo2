@@ -1,15 +1,8 @@
-// import * as $ from '@libs/jquery/dist/jquery.js';
-// import * as a$ from './../../libs/jquery/dist/jquery.js';
-// console.log(a$);
-// import * as a$ from '@libs/jquery/dist/jquery.js';
-// console.log('a$:', a$);
-
-import Game from './../../core/models/game.js';
+import { Game } from './../../../core/index';
 
 import Directions from './types/directions.js';
 import Colors from './types/colors.js';
 import Keys from './types/keys.js';
-import Env from './types/env.js';
 
 import Config from './config.js';
 
@@ -22,8 +15,7 @@ import PlayGround from './playGround.js';
  * 		start：开始游戏
  * 		close：关闭游戏
  */
-export default class Snake implements Game {
-	private /*readonly*/ canvas: Element;
+export default class Snake extends Game {
 	private /*readonly*/ playGround: PlayGround;
 
 	private readonly config: Config;
@@ -40,7 +32,10 @@ export default class Snake implements Game {
 	private readonly keyCodeDirectionMaps: Directions;
 	private readonly maxColumnIndex: number;
 
-	constructor(env: Env) {
+	constructor(
+		private canvas: HTMLCanvasElement
+	) {
+		super('simpleSnake', 'simple snake');
 
 		this.snake = [2, 1];
 		this.food = 3;
@@ -51,7 +46,7 @@ export default class Snake implements Game {
 		this.isPaused = false;
 		this.isStoped = false;
 
-		this.config = new Config(env.settings);
+		this.config = new Config();
 		this.maxColumnIndex = this.config.groundColumns - 1;
 		this.keyCodeDirectionMaps = {
 			37: -1, 				// left
@@ -60,8 +55,6 @@ export default class Snake implements Game {
 			40: this.config.groundColumns 		// down
 		};
 		this.direction = this.keyCodeDirectionMaps[Keys.Right];
-
-		this.canvas = env.canvas;
 		this.playGround = new PlayGround(this.canvas, this.config);
 	}
 
