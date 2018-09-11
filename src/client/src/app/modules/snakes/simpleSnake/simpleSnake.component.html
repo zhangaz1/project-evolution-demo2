@@ -1,3 +1,11 @@
-<p>
-  simpleSnake works!
-</p>
+<div>
+    <div>
+        <canvas #gameGround class="game-ground"></canvas>
+    </div>
+    <div>
+        <button (click)="game.start()">Start</button>
+        <button (click)="game.pause()">Pause</button>
+        <button (click)="game.continue()">Continue</button>
+        <button (click)="game.stop()">Stop</button>
+    </div>
+</div>
