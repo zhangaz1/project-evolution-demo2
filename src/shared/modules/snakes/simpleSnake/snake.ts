@@ -70,7 +70,7 @@ export default class Snake extends Game {
 		this.playGround.destroy();
 		this.playGround = null;
 
-		$(this.canvas).remove();
+		// $(this.canvas).remove();
 		this.canvas = null;
 	}
 
@@ -179,7 +179,7 @@ export default class Snake extends Game {
 	}
 
 	private setNextMove() {
-		this.timer = setTimeout(this.next, 130);
+		this.timer = setTimeout(this.next, 330);
 	}
 
 	private isEatFood() {

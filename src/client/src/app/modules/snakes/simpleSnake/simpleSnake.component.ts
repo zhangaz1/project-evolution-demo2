@@ -18,6 +18,7 @@ export class SimpleSnakeComponent implements OnInit {
 
   public ngOnInit() {
     this.game = new SimpleSnake(this.gameGround.nativeElement);
+    this.game.open();
   }
 
 }
