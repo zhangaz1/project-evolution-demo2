@@ -1,5 +1,10 @@
 # README
 
+## Versions:
+
+* V0.0.2: update client to V0.0.2
+* V0.0.1: init code
+
 ## src
 
 ## src/server

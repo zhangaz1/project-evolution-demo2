@@ -1,6 +1,6 @@
 {
   "name": "project-evolution-demo2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "with nest + angular+",
   "main": "index.js",
   "scripts": {
