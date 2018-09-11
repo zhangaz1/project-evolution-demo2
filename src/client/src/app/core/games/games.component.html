@@ -2,5 +2,6 @@
     <p>games:</p>
     <ul>
         <li *ngFor="let game of games|async"><label (click)="showGame(game.id)">{{game.name}}</label></li>
+        <!-- <li *ngFor="let game of games|async"><label [routerLink]="game.id">{{game.name}}</label></li> -->
     </ul>
 </div>

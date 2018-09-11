@@ -28,9 +28,12 @@ export {
   OnlineSnakeComponent,
 };
 
+import { SnakesRoutes } from './snakes.routing'; // 此位置需要依赖上面的export
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SnakesRoutes,
   ],
   exports: [
     SimpleSnakeModule,

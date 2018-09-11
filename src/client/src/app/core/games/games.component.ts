@@ -26,7 +26,7 @@ export class GamesComponent implements OnInit {
   }
 
   public showGame(gameId: string) {
-    this.router.navigate([gameId]);
+    this.router.navigate(['snakes', gameId]);
   }
 
 }
