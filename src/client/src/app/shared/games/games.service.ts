@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { IGame } from '@interfaces/index';
-import { Game } from '@models/index';
+import { IGame } from '@@shared/core/interfaces/index';
+import { Game } from '@@shared/core/models/index';
 
 @Injectable({
   providedIn: 'root'

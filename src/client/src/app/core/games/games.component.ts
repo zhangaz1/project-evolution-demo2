@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 import { Observable } from 'rxjs';
 
-import { IGame } from '@interfaces/index';
+import { IGame } from '@@shared/core/interfaces/index';
 
 import { GamesService } from '../../shared/games/games.service';
 
