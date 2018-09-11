@@ -15,7 +15,7 @@ export class GamesService {
     return of([
       new Game('simpleSnake', 'simple snake'),
       new Game('advancedSnake', 'advanced snake'),
-      new Game('rxSnake', 'reactive snake'),
+      new Game('rxSnake', 'rx snake'),
       new Game('onlineSnake', 'online snake'),
     ]);
   }
